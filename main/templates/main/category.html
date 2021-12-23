@@ -1,0 +1,10 @@
+{% extends 'main/main.html' %}
+{% block content %}
+    {% for category in categories %}
+        <p align="center">
+            <a href="{% url 'products' category.pk %}" style="text-decoration: none; color: black">
+                <b>{{category}}</b>
+            </a>
+        </p>
+    {% endfor %}
+{% endblock %}
